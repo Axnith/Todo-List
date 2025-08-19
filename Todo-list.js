@@ -1,5 +1,4 @@
 let TodoList = JSON.parse(localStorage.getItem('TodoList')) || [];
-localStorage.setItem('TodoList',JSON.stringify(TodoList));
 function AddToList(){
   const inputName = document.querySelector('.js-input-name');
   const taskname = inputName.value;
@@ -15,7 +14,7 @@ function AddToList(){
   DisplayHTML();
 }
 function DisplayHTML(){
-  let DisplayHTML = ``;
+  let outputHTML = ``;
   for(let i=0;i<TodoList.length;i++){
     let Todos = TodoList[i];
     let html = `
@@ -23,9 +22,9 @@ function DisplayHTML(){
     <div class="tasks">${Todos.duedate}</div>
     <div><button class="delete-button" onclick="Delete(${i})">Delete</button></div>
     `;
-    DisplayHTML+=html;
+    outputHTML+=html;
   }
-  document.querySelector('.js-display-html').innerHTML = DisplayHTML;
+  document.querySelector('.js-display-html').innerHTML = outputHTML;
 }
 function Delete(index){
   TodoList.splice(index,1);
@@ -38,6 +37,7 @@ function ClearAll(index){
   DisplayHTML();
 }
 DisplayHTML();
+
 
 
 
