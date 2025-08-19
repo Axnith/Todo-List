@@ -1,5 +1,5 @@
  @font-face {
-  font-family: 'sohne'; /* Name you will use in CSS */
+  font-family: 'sohne';
   src: url('Fonts/sohne-font-family-1755243600-0/TestSohne-BuchKursiv-BF663d89cd3e887.otf') format('opentype');
 }
 button:hover{
@@ -59,4 +59,5 @@ body{
 .tasks{
   font-family: 'sohne';
   font-style: italic;
+
 }
