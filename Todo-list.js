@@ -1,4 +1,3 @@
-DisplayHTML();
 let TodoList = JSON.parse(localStorage.getItem('TodoList')) || [];
 function AddToList(){
   const inputName = document.querySelector('.js-input-name');
@@ -37,9 +36,4 @@ function ClearAll(index){
   localStorage.setItem('TodoList',JSON.stringify(TodoList));
   DisplayHTML();
 }
-
-
-
-
-
-
+DisplayHTML();
