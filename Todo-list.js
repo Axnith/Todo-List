@@ -1,4 +1,4 @@
-TodoList = JSON.parse(localStorage.getItem('TodoList'));
+let TodoList = JSON.parse(localStorage.getItem('TodoList'));
 function AddToList(){
   const inputName = document.querySelector('.js-input-name');
   const taskname = inputName.value;
